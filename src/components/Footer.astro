@@ -1,25 +1,74 @@
 ---
+
 ---
 
-<div class="fwrap">
-    <ul>
-        <li><h3>Om CA</h3></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <ul>
-        <li><h3>Om CA</h3></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
+<footer class="fwrap">
+    <div class="link-container">
+        <ul>
+            <li><a href="#">Om CA</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Nyheder</a></li>
+            <li><a href="#">Nyhedsbrev</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Studiepartner</a></li>
+            <li><a href="#">Instant feedback</a></li>
+            <li><a href="#">Løntjek</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Persondatapolitik</a></li>
+            <li><a href="#">Cookiepolitik</a></li>
+            <li><a href="#">Tilgænglighedsforklaring</a></li>
+        </ul>
+        <div>
+            <p>Telefon hverdage 8.30 - 15.00</p>
+            <a href="#"><h3>3314 9045</h3></a>
+            <a>Send en besked</a>
+        </div>
+    </div>
+    <div class="logo-section">
+        <div class="logo-container">
+            <img src="media/image/ca_logo.svg" alt="Logonoget">
+            <img src="media/image/trustpilot.svg" alt="Etc">
+            <img src="media/image/ca_connect.svg" alt="En til">
+            <img src="media/image/ca_studie.svg" alt="JADA!">
+        </div>
+    </div>
+</footer>
 
 <style>
 .fwrap {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--ca_blue_norm);
+    display: grid;
+    margin-top: 25px;
+    width: 100%;
+    color: var(--color_gray_50);
+}
+.fwrap ul {
+}
+.fwrap ul li {
+    list-style: none;
+    margin: 1rem;
+}
+.link-container {
+    display: grid;
+    margin: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.link-container div {
+    margin: 1rem;
+}
+.logo-section {
+display: grid;
+padding: 1rem;
+width: 100%;
+
+}
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 5rem;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
 }
 </style>

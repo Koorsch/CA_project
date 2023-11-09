@@ -3,13 +3,65 @@
 ---
 
 <nav>
-
+    <img src="media/image/ca.svg" alt="CA logo">
+    <div id="menubar">
+        <ul>
+            <li><a href="#">Kampagne</a></li>
+            <li><a href="#opslag">Opslag</a></li>
+            <li><a href="#">Andet</a></li>
+        </ul>
+        <div id="login"><a href="#">Mit CA</a></div>
+    </div>
 </nav>
-
 
 <style>
     nav {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        background-color: var(--ca_supp_beige);
+        justify-content: space-between;
+        align-content: center;
+        & img {
+            align-self: center;
+            width: 10rem;
+            height: auto;
+        }
+        & a {
+            text-decoration: none;
+            font-size: 1.25rem;
+        }
+        & ul {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+        & li {
+            list-style: none;
+            margin: 1rem;
+            width: 10vw;
+        }
+    }
+    #menubar {
         display: flex;
-        background-color: var(--ca_blue_norm);
+        justify-content: right;
+    }
+    #login {
+        display: grid;
+        align-content: center;
+        background-color: var(--ca_blue_dark);
+        padding: 0.8rem;
+        color: var(--ca_supp_beige);
+        & a {
+            padding: 0.5rem;
+            margin: 1rem;
+        }
+    }
+
+    @media (max-width: 800px) {
+        li {
+        display: none;
+        }
     }
 </style>

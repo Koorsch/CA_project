@@ -1,0 +1,33 @@
+---
+const {buttonVariant, buttonText, buttonLink} = Astro.props;
+---
+
+<button data-variant={buttonVariant}>
+    <a href={buttonLink}>{buttonText}</a>
+</button>
+
+<style>
+button {
+    border-radius: 0.8rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: fit-content;
+    height: fit-content;
+}
+button a {
+    margin: 0.5rem;
+}
+a, a:active, a:visited, a:any-link, a: {
+    text-decoration: none;  
+}
+[data-variant="primary"] {
+    background-color: var(--ca_blue_dark);
+    border: none;
+    color: var(--ca_supp_beige)  
+}
+[data-variant="secondary"] {
+    background-color: var(--ca_supp_lbeige);
+    border: 2px solid var(--ca_blue_darker);
+    color: var(--ca_blue_dark);
+}
+</style>
