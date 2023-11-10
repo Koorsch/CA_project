@@ -1,61 +1,98 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import SomeCard from '../components/SomeCard.astro';
+
+const {} = Astro.props;
 ---
 
 
 <Layout title="CA Kampagneside">
-<section class="hero">
-<video src="media/video/forScreenShots.mp4"></video>
-<h2>Hej på jer</h2>
-</section>
-<article id="opslag">
-	<Card variant="imgLeft"
-		  headerText="Hej, det er en header"
-		  copy="Dette er almindelig tekst."
-		  imgSrc="media/image/ca_studie.svg"
-		  imgAlt="Nogen slags tekst"
-		  buttonText="Klik mig"
-		  buttonVariant="primary"
-		  buttonLink="#">
-	</Card>
-	<Card variant="imgRight"
-		headerText="Hej, det er en header"
-		copy="Dette er almindelig tekst."
-		imgSrc="media/image/ca_studie.svg"
-		imgAlt="Nogen slags tekst"
-		buttonText="Klik mig"
-		buttonVariant="secondary"
-		buttonLink="#">
-	</Card>
-
+<!-- HERO gemmes tils videre 
+-->
+<article id="video">
 	<Card variant="imgLeft" 
 		headerText="Hej, det er en header" 
-		copy="Dette er almindelig tekst." 
-		imgSrc="media/image/ca_studie.svg" 
+		copy="Dette er almindelig tekst."
+		isVideo={true}
+		videoSrc="CA_NaarDetSvaertAtBliveVoksen.mp4"
+		isImg={false}
+		imgSrc="" 
 		imgAlt="Nogen slags tekst" 
+		hasButton={true}
 		buttonText="Klik mig" 
 		buttonVariant="primary" 
 		buttonLink="#">
+	</Card>
+	<Card variant="imgRight" 
+		headerText="Hej, det er en header" 
+		copy="Dette er almindelig tekst." 
+		isVideo={false}
+		videoSrc={null}
+		isImg={true}
+		imgSrc="ca_studie.svg" 
+		imgAlt="Nogen slags tekst" 
+		hasButton={true}
+		buttonText="Klik mig" 
+		buttonVariant="primary" 
+		buttonLink="#">
+</Card>
+</article>
+<article class="someCards">
+	<SomeCard 
+		imgSrc="ca_connect.svg"
+		imgAlt="En eller anden billede."
+		headerText="En rubrik"
+		bodyText="Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst."
+		hasButton={false}
+		buttonVariant="primary"
+		buttonText="Klik mig">
+	</SomeCard>
+	<SomeCard 
+		imgSrc="ca_connect.svg"
+		imgAlt="En eller anden billede."
+		headerText="En rubrik"
+		bodyText="Her er en del tekst. Her er en del tekst. Her er en del tekst."
+		hasButton={false}
+		buttonVariant="primary"
+		buttonText="Klik mig">
+	</SomeCard>
+	<SomeCard 
+		imgSrc="ca_connect.svg"
+		imgAlt="En eller anden billede."
+		headerText="En rubrik"
+		bodyText="Her er en del tekst. Her er en del tekst. Her er en del tekst."
+		hasButton={false}
+		buttonVariant="primary"
+		buttonText="Klik mig">
+	</SomeCard>	
+</article>
+<article id="process">
+	<Card variant="imgLeft" 
+	headerText="Hej, det er en header" 
+	copy="Dette er almindelig tekst."
+	isVideo={false}
+	videoSrc=""
+	isImg={true}
+	imgSrc="ca_connect.svg" 
+	imgAlt="Nogen slags tekst" 
+	hasButton={true}
+	buttonText="Klik mig" 
+	buttonVariant="primary" 
+	buttonLink="#">
 	</Card>
 </article>
 </Layout>
 
 <style>
-	article {
-		display: grid;
-		grid-auto-flow: row;
-		gap: 1rem;
-		margin-top: 1rem;
-	}
 	.hero {
 		position: relative;
-		width: 100%;
+		height: 100%;
 		height: fit-content;
 		& video {
 			width: 100%;
 			height: 100%;
-			object-fit: fill;
+			object-fit: contain;
 			aspect-ratio: 16/9;
 		}
 		& h2 {
@@ -71,5 +108,23 @@ import Card from '../components/Card.astro';
 			left: 5vw;
 			bottom: 5vh;
 		}
+	}
+	.video {
+		display: grid;
+		grid-auto-flow: row;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+	.someCards {
+		display: flex;
+		flex-direction: row;
+		gap: 1.5rem;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex: 1 0;
+		 & :nth-last-col {
+			
+		 }
 	}
 </style>

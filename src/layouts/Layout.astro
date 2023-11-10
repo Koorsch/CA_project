@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 interface Props {
 	title: string;
 }
@@ -26,78 +27,9 @@ const { title } = Astro.props;
 	<Footer />
 	</body>
 </html>
-<style is:global>
-	:root {
-	--logo_col: rgb(0, 148, 214);
-	--color_gray_50: #4a4a4a;
-	--color_gray_60: #333;
-	--ca_blue_darker: rgb(5, 70, 116);
-	--ca_blue_dark: rgb(10, 121, 174);
-	--ca_blue_norm: rgb(0, 148, 214);
-	--ca_blue_light: rgb(230, 241, 247);
-	--ca_accent_purple: rgb(85, 0, 65);
-	--ca_accent_lpurple: rgb(238, 229, 236);
-	--ca_accent_red: rgb(213, 65, 65);
-	--ca_accent_lred: rgb(251, 236, 236);
-	--ca_accent_green: rgb(63, 131, 103);
-	--ca_accent_lgreen: rgb(235, 242, 240);
-	--ca_accent_gold: rgb(140, 115, 0);
-	--ca_accent_lgold: rgb(243, 241, 229);
-	--ca_supp_dbrown: rgb(74, 74, 74);
-	--ca_supp_brown: rgb(84, 85, 74);
-	--ca_supp_beige: rgb(205, 197, 181);
-	--ca_supp_lbeige: rgb(230, 230, 221);
-	--ca_supp_llbeige: rgb(241, 241, 237);
-	--ca_heading_text: "NexaBold", sans-serif;
-	--ca_text: "OpenSans", sans-serif;
-	}
-@font-face {
-  font-family: "NexaBold";
-  src: url("media/font/NexaBold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("media/font/OpenSans-Regular.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-order {
-  order: -1;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<style>
 body {
-  background-color: var(--ca_supp_beige);
-  display: grid;
-  grid-auto-rows: min-content;
+	max-width: 1600px; */
+	margin: auto;
 }
-main {
-  background-color: var(--ca_supp_lbeige);
-}
-h1,
-h2,
-h3 {
-  font-family: var(--ca_heading_text);
-}
-p,
-a {
-	font-family: var(--ca_text);
-}
-a {
-  text-decoration: none;
-  color: var(--color_gray_50);
-  
-  & a:hover {
-	color: var(--color_gray_60);
-  }
-}
-
-
 </style>

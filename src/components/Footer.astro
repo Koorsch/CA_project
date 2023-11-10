@@ -66,9 +66,15 @@ width: 100%;
 .logo-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 5rem;
+    margin: 2rem;
     gap: 2rem;
     justify-items: center;
     align-items: center;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill
+    }
 }
+
 </style>
