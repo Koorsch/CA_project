@@ -109,7 +109,7 @@ const {} = Astro.props;
 			bottom: 5vh;
 		}
 	}
-	.video {
+	#video {
 		display: grid;
 		grid-auto-flow: row;
 		gap: 1rem;
@@ -117,14 +117,12 @@ const {} = Astro.props;
 	}
 	.someCards {
 		display: flex;
+		background-color: var(--ca_supp_llbeige);
 		flex-direction: row;
 		gap: 1.5rem;
 		width: 100%;
 		flex-wrap: wrap;
 		justify-content: center;
 		flex: 1 0;
-		 & :nth-last-col {
-			
-		 }
 	}
 </style>
