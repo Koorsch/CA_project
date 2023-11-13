@@ -2,7 +2,6 @@
 const {headerText, bodyText, imgSrc, imgAlt, buttonVariant, buttonText, someVariant, hasButton} = Astro.props;
 import Button from "./Button.astro";
 ---
-
 <section data-variant={someVariant}>
     <img src=`media/image/${imgSrc}` alt={imgAlt}>
     <div class="border">
@@ -32,11 +31,14 @@ section {
       
     }
     & div{
-        background-color: aqua;
+        background-color:var(--ca_blue_darker);
         border-top-left-radius: 3rem;
         border-bottom-right-radius: 3rem;
+        color: white;
+        padding: 1rem;
         & h2 {
             margin: 1rem;
+           
 
         }
         & p {

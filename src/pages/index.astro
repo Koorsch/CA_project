@@ -9,38 +9,57 @@ const {} = Astro.props;
 
 <Layout title="CA Kampagneside">
 <article class="hero">
-	<img src="" alt="Hero billede, banner, noget sjovt, etc">
-	<h2>Hej på jere</h2>
+	<img src="/media/image/banner.png" alt="Hero billede, banner, noget sjovt, etc">
 </article> 
 <article id="video">
 	<Card variant="imgLeft" 
-		headerText="Hej, det er en header" 
-		copy="Dette er almindelig tekst."
-		isVideo={true}
+		headerText="Youtube Kampagne" 
+		copy={null}
+		isVideo={false}
 		videoSrc="CA_NaarDetSvaertAtBliveVoksen.mp4"
+		isYoutube={true}
+		youtubeSrc="https://www.youtube.com/embed/WX5UOnpCEsU?si=sWOkhc2vNBt-78XW"
 		isImg={false}
 		imgSrc="" 
 		imgAlt="Nogen slags tekst" 
 		hasButton={true}
-		buttonText="Klik mig" 
+		buttonText="Se video her" 
 		buttonVariant="primary" 
 		buttonLink="#">
+		<p>I kampagnevideoen følger vi historien om en 30-årig mand, der stadig bor sammen med sin mor.
+			Hans mor har altid været der for ham og har hjulpet ham med alt, fra at skrive jobansøgninger til at rydde op.
+			Manden har ikke taget ansvar for sit eget liv og har været afhængig af sin mors støtte. <br><br>
+
+			Pludselig tager historien en drejning, da manden beslutter sig for at melde sig ind i en arbejdsløshedskasse (A-kasse).
+			Dette er et afgørende skridt, der markerer begyndelsen på hans egen uafhængighed.
+			Med hjælp fra A-kassen begynder han at tage kontrol over sit eget liv, og han lærer at klare sig selv.</p>
 	</Card>
 	<Card variant="imgRight" 
-		headerText="Hej, det er en header" 
-		copy="Dette er almindelig tekst." 
+		headerText="Instagram Kampange" 
+		copy={null} 
 		isVideo={false}
 		videoSrc={null}
-		isImg={true}
+		isYoutube={false}
+		youtubeSrc=""
+		isImg={false}
+		isShorts={true}
+		shortsSrc="https://youtube.com/embed/w_rGOQ00twI?si=133uCwxZZGVgtky1"
 		imgSrc="ca_studie.svg" 
 		imgAlt="Nogen slags tekst" 
 		hasButton={true}
-		buttonText="Klik mig" 
+		buttonText="Se video her" 
 		buttonVariant="primary" 
 		buttonLink="#">
+		<p>I kampagnevideoen følger vi historien om en 30-årig mand, der stadig bor sammen med sin mor.
+			Hans mor har altid været der for ham og har hjulpet ham med alt, fra at skrive jobansøgninger til at rydde op.
+			Manden har ikke taget ansvar for sit eget liv og har været afhængig af sin mors støtte. <br><br>
+
+			Pludselig tager historien en drejning, da manden beslutter sig for at melde sig ind i en arbejdsløshedskasse (A-kasse).
+			Dette er et afgørende skridt, der markerer begyndelsen på hans egen uafhængighed.
+			Med hjælp fra A-kassen begynder han at tage kontrol over sit eget liv, og han lærer at klare sig selv.</p>
 </Card>
 </article>
-<article class="someCards">
+<article id="opslag" class="someCards">
 	<SomeCard 
 		imgSrc="meme_1.png"
 		imgAlt="En eller anden billede."
@@ -93,11 +112,12 @@ const {} = Astro.props;
 		width: 100%;
 		height: 200px;
 		background-color: var(--ca_blue_norm);
+		margin-bottom: 3rem;
 		& video, img {
 			width: 100%;
-			height: 50%;
+			height: auto;
 			object-fit: fill;
-			aspect-ratio: 16/9;
+			
 		}
 		& h2 {
 			position: absolute;

@@ -58,7 +58,10 @@ h2,
 h3 {
   font-family: var(--ca_heading_text);
 }
-p,
+p {
+  font-family: var(--ca_text);
+  line-height:1.5em;
+}
 a {
   font-family: var(--ca_text);
 }

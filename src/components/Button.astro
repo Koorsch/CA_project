@@ -10,14 +10,17 @@ const {buttonVariant, buttonText, buttonLink} = Astro.props;
 button {
     border-radius: 0.4rem;
     width: fit-content;
-    height: 36px;
+    height: 56px;
 }
 button a {
     margin: 1rem;
     padding: 1rem;
+    color: white;
+    font-weight: bolder;
 }
-a, a:active, a:visited, a:any-link, a: {
-    text-decoration: none;  
+a, a:active, a:visited, a:any-link {
+    font-size: 1rem;
+    text-decoration: none; 
 }
 [data-variant="primary"] {
     background-color: var(--ca_blue_dark);
