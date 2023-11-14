@@ -5,7 +5,7 @@ import Button from '../components/Button.astro';
 
 <section data-variant={variant}>
 	<div class="imgBox">
-		{isImg && <img src={`media/image/${imgSrc}`} alt={imgAlt}/>}
+		{isImg && <img loading="lazy" src={`media/image/${imgSrc}`} alt={imgAlt}/>}
 		{isVideo && <video src={`media/video/${videoSrc}`} muted controls></video>}
 		{isYoutube && <iframe width="100%" height="100%" src={youtubeSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
 		{isShorts && <iframe height="500px" width="500px" src={shortsSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}

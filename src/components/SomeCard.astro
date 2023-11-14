@@ -3,7 +3,7 @@ const {headerText, bodyText, imgSrc, imgAlt, buttonVariant, buttonText, someVari
 import Button from "./Button.astro";
 ---
 <section data-variant={someVariant}>
-    <img src=`media/image/${imgSrc}` alt={imgAlt}>
+    <img loading="lazy" src=`media/image/${imgSrc}` alt={imgAlt}>
     <div class="border">
         <h2>{headerText}</h2>
        <slot></slot>
