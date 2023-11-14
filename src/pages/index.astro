@@ -2,16 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import SomeCard from '../components/SomeCard.astro';
+import TextsBox from '../components/TextsBox.astro';
+import Button from '../components/Button.astro';
 
 const {} = Astro.props;
+const YoutubeVideo = "https://www.youtube.com/watch?v=WX5UOnpCEsU";
+const ShortVideo = "https://www.youtube.com/watch?v=WX5UOnpCEsU";
 ---
 
 
 <Layout title="CA Kampagneside">
 <article class="hero">
-	<img src="/media/image/banner.png" alt="Hero billede, banner, noget sjovt, etc">
+	<img src="/media/image/Banner_light.webp" alt="Hero billede, banner, noget sjovt, etc">
 </article> 
 <article id="video">
+<TextsBox></TextsBox>
 	<Card variant="imgLeft" 
 		headerText="Youtube Kampagne" 
 		copy={null}
@@ -25,7 +30,7 @@ const {} = Astro.props;
 		hasButton={true}
 		buttonText="Se video her" 
 		buttonVariant="primary" 
-		buttonLink="#">
+		YoutubeVideo>
 		<p>I kampagnevideoen følger vi historien om en 30-årig mand, der stadig bor sammen med sin mor.
 			Hans mor har altid været der for ham og har hjulpet ham med alt, fra at skrive jobansøgninger til at rydde op.
 			Manden har ikke taget ansvar for sit eget liv og har været afhængig af sin mors støtte. <br><br>
@@ -33,75 +38,112 @@ const {} = Astro.props;
 			Pludselig tager historien en drejning, da manden beslutter sig for at melde sig ind i en arbejdsløshedskasse (A-kasse).
 			Dette er et afgørende skridt, der markerer begyndelsen på hans egen uafhængighed.
 			Med hjælp fra A-kassen begynder han at tage kontrol over sit eget liv, og han lærer at klare sig selv.</p>
+			<!-- <Button buttonVariant="primary" buttonText="Se video her" ><a href="https://www.youtube.com/watch?v=WX5UOnpCEsU"></a></Button> -->
 	</Card>
 	<Card variant="imgRight" 
 		headerText="Instagram Kampange" 
-		copy={null} 
-		isVideo={false}
-		videoSrc={null}
-		isYoutube={false}
-		youtubeSrc=""
-		isImg={false}
 		isShorts={true}
-		shortsSrc="https://youtube.com/embed/w_rGOQ00twI?si=133uCwxZZGVgtky1"
-		imgSrc="ca_studie.svg" 
-		imgAlt="Nogen slags tekst" 
+		shortsSrc="https://youtube.com/embed/w_rGOQ00twI?si=133uCwxZZGVgtky1" 
 		hasButton={true}
 		buttonText="Se video her" 
 		buttonVariant="primary" 
-		buttonLink="#">
-		<p>I kampagnevideoen følger vi historien om en 30-årig mand, der stadig bor sammen med sin mor.
-			Hans mor har altid været der for ham og har hjulpet ham med alt, fra at skrive jobansøgninger til at rydde op.
-			Manden har ikke taget ansvar for sit eget liv og har været afhængig af sin mors støtte. <br><br>
+		YoutubeVideo>
+		<p>I denne inspirerende kampagnevideo følger vi en 30-årig mand, hvis liv tager en bemærkelsesværdig vending. 
+			Han bor stadig hos sin mor, og hun har længe stået for alt, lige fra at skrive hans jobansøgninger til at tage sig af oprydning. 
+			Historien tager dog en positiv drejning, da manden beslutter sig for at tage kontrol over sit eget skæbne.
 
-			Pludselig tager historien en drejning, da manden beslutter sig for at melde sig ind i en arbejdsløshedskasse (A-kasse).
-			Dette er et afgørende skridt, der markerer begyndelsen på hans egen uafhængighed.
-			Med hjælp fra A-kassen begynder han at tage kontrol over sit eget liv, og han lærer at klare sig selv.</p>
+			I en afgørende beslutning melder han sig ind i en arbejdsløshedskasse (A-kasse), og det bliver startskuddet til hans rejse mod selvstændighed. 
+			Nu med støtte fra A-kassen, lærer han at navigere i jobmarkedet, skrive sine egne ansøgninger og håndtere udfordringerne ved voksenlivet.
+			
+			Denne hjertevarme historie illustrerer ikke kun en personlig transformation, men sender også en dybere besked om vigtigheden af at tage ansvar for sit eget liv. 
+			Videoen formidler budskabet om, hvordan støtte fra en A-kasse kan være nøglen til selvstændighed og succes. 
+			Det er en fortælling om forandring, vækst og modet til at tage skridt mod en mere selvstændig fremtid.</p>
 </Card>
 </article>
 <article id="opslag" class="someCards">
 	<SomeCard 
-		imgSrc="meme_1.png"
-		imgAlt="En eller anden billede."
-		headerText="En rubrik"
-		bodyText="Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst."
+		imgSrc="5tips.webp"
+		imgAlt="5 tips til arbejdsglæde"
+		headerText="5 Gode Råd fra CA A-kasse:"
 		hasButton={false}
 		buttonVariant="primary"
 		buttonText="Klik mig">
+		<p>Tag temperaturen på dit humør om morgenen. Start dagen med positiv energi!
+
+			Hav fokus på udvikling af dine kompetencer. Løbende læring åbner døre.
+			Skab grobund for forandringer - store som små. Forbered dig på fremtiden.
+
+			Værn om dine relationer. Gode relationer styrker dig.
+			Sæt dit præg på rammerne - de er vigtige. 
+			Form dit arbejdsliv, som du ønsker det.</p>
 	</SomeCard>
 	<SomeCard 
-		imgSrc="meme_1.png"
-		imgAlt="En eller anden billede."
-		headerText="En rubrik"
-		bodyText="Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst."
+		imgSrc="trygOgOverskud.webp"
+		imgAlt="Tryghed og Overskud med CA A-kasse:"
+		headerText="Tryghed og Overskud med CA A-kasse:"
 		hasButton={false}
 		buttonVariant="primary"
 		buttonText="Klik mig">
+		<p>Jeg føler mig tryg og har overskud til at dyrke mine interesser CA A-kasse sikrer, at du har ro til at forfølge det, du elsker.</p>
 	</SomeCard>
 	<SomeCard 
-		imgSrc="meme_1.png"
+		imgSrc="eksamen.webp"
 		imgAlt="En eller anden billede."
-		headerText="En rubrik"
-		bodyText="Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst. Her er en del tekst."
+		headerText="Eksamensrejsen med CA A-kasse:"
 		hasButton={false}
 		buttonVariant="primary"
 		buttonText="Klik mig">
+		<p>Dagen for din sidste eksamen. Du har knoklet, og nu er dagen her. Du er klar!
+
+			1 dag efter din sidste eksamen. Jubel, frihed, og en ny begyndelse venter.
+
+			14 dage efter din sidste eksamen. Hvordan former du din fremtid? CA A-kasse støtter dig.
+
+			Sidste hverdag i måneden. Planlæg din karriere med sikkerhed. CA A-kasse er med dig hele vejen</p>
 	</SomeCard>	
-</article>
-<article id="process">
-	<Card variant="imgLeft" 
-	headerText="Hej, det er en header" 
-	copy="Dette er almindelig tekst."
-	isVideo={false}
-	videoSrc=""
-	isImg={true}
-	imgSrc="ca_connect.svg" 
-	imgAlt="Nogen slags tekst" 
-	hasButton={true}
-	buttonText="Klik mig" 
-	buttonVariant="primary" 
-	buttonLink="#">
-	</Card>
+	<SomeCard 
+	imgSrc="meldDigInd_meme.webp"
+	imgAlt="5 tips til arbejdsglæde"
+	headerText="Meme - Meld dig ind"
+	hasButton={false}
+	buttonVariant="primary"
+	buttonText="Klik mig">
+	<p>Når du er 30 år gammel og din gamle mor stadig servicerer dig, er det måske på tide at dreje nøglen om på livets vending. 
+		
+		Hos CA har vi den perfekte opskrift på overskud, både i økonomien og sindet! Meld dig ind i CA og oplev fordelene ved at tage kontrol over din egen skæbne. 
+		
+		Det er aldrig for sent at bytte roller og træde ind i et liv med økonomisk frihed og selvstændighed. 
+		
+		Lad os sammen skabe forandring!</p>
+</SomeCard>
+<SomeCard 
+	imgSrc="Storstepress_meme.webp"
+	imgAlt="En eller anden billede."
+	headerText="Når A-kassen løfter byrden:"
+	hasButton={false}
+	buttonVariant="primary"
+	buttonText="Klik mig">
+	<p>Du kender følelsen. Livet har kastet udfordringer din vej, men heldigvis har din A-kasse stået ved din side som den ultimative støtte. 
+		Som en pålidelig partner har de taget det største pres fra dine skuldre og givet dig ro i sindet.
+	
+		Billedet ovenfor fanger det øjeblik, hvor lettelsen spreder sig. 
+		Ansigtet afslører glæden ved at vide, at A-kassen har din ryg. 
+		"Er der eller andet vi kan gøre for dig?" spørger de, og du indser, at du ikke bare er medlem af en A-kasse du er en del af et fællesskab, 
+		der virkelig bekymrer sig om dit velvære.
+	
+		Så næste gang livet sender en udfordring din vej, kan du trøstende tænke: 
+		"Min A-kasse løfter byrden, alt bliver lettere med dem ved min side!</p>
+</SomeCard>
+<SomeCard 
+	imgSrc="vasketoj_meme.webp"
+	imgAlt="En eller anden billede."
+	headerText="Velkommen til vaskerummet"
+	hasButton={false}
+	buttonVariant="primary"
+	buttonText="Klik mig">
+	<p>Velkommen til vaskerummet af voksenlivet, hvor det ikke kun er tøjet, der skal sorteres, men også livets mange opgaver og udfordringer. 
+		Måske er det på tide at give din mor et virtuelt high-five for alle de år, hun har klaret det her!</p>
+</SomeCard>	
 </article>
 </Layout>
 
@@ -149,4 +191,5 @@ const {} = Astro.props;
 		justify-content: center;
 		flex: 1 0;
 	}
+
 </style>

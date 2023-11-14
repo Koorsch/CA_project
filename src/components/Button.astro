@@ -1,9 +1,11 @@
 ---
 const {buttonVariant, buttonText, buttonLink} = Astro.props;
+const YoutubeVideo = "https://www.youtube.com/watch?v=WX5UOnpCEsU";
 ---
 
 <button data-variant={buttonVariant}>
-    <a href={buttonLink}>{buttonText}</a>
+    <a target="_blank" href={YoutubeVideo}>{buttonText}</a>
+    <slot></slot>
 </button>
 
 <style>
@@ -21,6 +23,7 @@ button a {
 a, a:active, a:visited, a:any-link {
     font-size: 1rem;
     text-decoration: none; 
+    cursor: pointer;
 }
 [data-variant="primary"] {
     background-color: var(--ca_blue_dark);

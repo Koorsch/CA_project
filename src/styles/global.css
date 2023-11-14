@@ -57,10 +57,15 @@ h1,
 h2,
 h3 {
   font-family: var(--ca_heading_text);
+  color: var(--ca_blue_norm);
+}
+h2{
+  margin: 1rem;
 }
 p {
   font-family: var(--ca_text);
   line-height:1.5em;
+  margin: 1rem;
 }
 a {
   font-family: var(--ca_text);

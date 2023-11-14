@@ -8,11 +8,10 @@ import Button from '../components/Button.astro';
 		{isImg && <img src={`media/image/${imgSrc}`} alt={imgAlt}/>}
 		{isVideo && <video src={`media/video/${videoSrc}`} muted controls></video>}
 		{isYoutube && <iframe width="100%" height="100%" src={youtubeSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
-		{isShorts && <iframe width="400px" height="400px" src={shortsSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
+		{isShorts && <iframe height="500px" width="500px" src={shortsSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
 	</div>
 	<div class="textBox">
 		<h2>{headerText}</h2>
-		<p>{copy}</p>
 		<slot></slot>
 		{hasButton && <Button buttonVariant={buttonVariant} buttonText={buttonText}/>}
 
@@ -28,9 +27,14 @@ import Button from '../components/Button.astro';
 	}
 	.textBox {
 		display: grid;
-		grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+		grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
 		padding: 1rem;
 		gap: 1rem;
+		white-space: pre-line;
+		text-wrap:balance;
+	}
+	.textBox h2 {
+  align-self: flex-end;
 	}
 	p {
 		line-height:5.5em;
